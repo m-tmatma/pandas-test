@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 state = np.random.randint(3, size=100)
 x     = np.arange(100)
@@ -30,3 +31,8 @@ df.to_csv("df.csv")
 print("-------------df----------------------")
 print(df)
 print("-----------------------------------")
+
+fig, ax = plt.subplots()
+
+df['duration'].hist(ax=ax, bins=5)
+fig.savefig("img.png")
