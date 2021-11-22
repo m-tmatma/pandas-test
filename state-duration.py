@@ -26,5 +26,5 @@ df.to_csv("df.csv")
 
 fig, ax = plt.subplots()
 
-df['duration'].hist(ax=ax, bins=5)
+df['duration'].hist(ax=ax, bins=range(6))
 fig.savefig("img.png")
