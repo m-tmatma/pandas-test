@@ -14,7 +14,7 @@ df['change'] = states != states.shift(-1)
 dfChange = df[ df['change'] ]
 
 # 先頭にダミーの要素を追加して、最初の項目の差分を計算できるようにする
-dfTemp = pd.DataFrame( {'x' : [0] }, index=[-1])
+dfTemp = pd.DataFrame( {'x' : [-1], 'state': False }, index=[-1])
 dfChange = dfTemp.append(dfChange)
 
 dfdiff_dfChange = dfChange.diff()
