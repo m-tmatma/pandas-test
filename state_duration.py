@@ -1,3 +1,7 @@
+#!/usr/bin/python
+''''
+指定した値の継続時間(duration)を計算するテストスクリプト
+'''
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
