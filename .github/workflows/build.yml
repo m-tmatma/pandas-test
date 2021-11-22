@@ -22,3 +22,14 @@ jobs:
     - name: build
       run: python3 state_duration.py
       
+    - name: artifact csv
+      uses: actions/upload-artifact@v2
+      with:
+        name: csv
+        path: '*.csv'
+        
+    - name: artifact png
+      uses: actions/upload-artifact@v2
+      with:
+        name: png
+        path: '*.png'
