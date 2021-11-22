@@ -18,19 +18,11 @@ dfTemp = pd.DataFrame( {'x' : [0] }, index=[-1])
 dfChange = dfTemp.append(dfChange)
 
 dfdiff_dfChange = dfChange.diff()
-print("-------------dfChange ----------------------")
-print(dfChange)
-print("-------------dfdiff_dfChange----------------------")
-print(dfdiff_dfChange)
 
 df['duration'] = dfdiff_dfChange['x']
 #dfChange['duration'] = dfdiff_dfChange['x'].abs()
 
 df.to_csv("df.csv")
-#dfChange.to_csv("dfChange.csv")
-print("-------------df----------------------")
-print(df)
-print("-----------------------------------")
 
 fig, ax = plt.subplots()
 
