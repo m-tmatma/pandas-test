@@ -11,5 +11,10 @@ states = df['state']
 
 df['change'] = states != states.shift(-1)
 dfChange = df[ df['change'] ]
+dfdiff_dfChange = dfChange.diff(-1)
 
-dfChange.to_csv("dfChange.csv")
+df['duration'] = dfdiff_dfChange['x'].abs()
+#dfChange['duration'] = dfdiff_dfChange['x'].abs()
+
+df.to_csv("df.csv")
+#dfChange.to_csv("dfChange.csv")
