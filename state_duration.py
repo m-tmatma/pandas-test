@@ -6,32 +6,42 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-state = np.random.randint(3, size=100)
-x     = np.arange(100)
-y     = np.arange(100,200)
+nrows = 2
+ncols = 2
+num   = nrows * ncols
 
-df = pd.DataFrame( {'x' : x, 'y' : y, 'state': state })
+cm = plt.cm.get_cmap('tab20')
 
-states = df['state']
+fig = plt.figure()
+for i in range(num):
+    ax = fig.add_subplot(nrows, ncols, i+1)
 
-df['change'] = states != states.shift(-1)
-dfChange = df[ df['change'] ]
+    state = np.random.randint(3+i, size=100)
+    x     = np.arange(100)
+    y     = np.arange(100,200)
 
-# ダミー要素に与える x 値を計算する
-diffX = df.diff(-1)["x"][0]
+    df = pd.DataFrame( {'x' : x, 'y' : y, 'state': state })
 
-# 先頭にダミーの要素を追加して、最初の項目の差分を計算できるようにする
-dfTemp = pd.DataFrame( {'x' : [diffX], 'state': False }, index=[-1])
-dfChange = dfTemp.append(dfChange)
+    states = df['state']
 
-dfdiff_dfChange = dfChange.diff()
+    df['change'] = states != states.shift(-1)
+    dfChange = df[ df['change'] ]
 
-df['duration'] = dfdiff_dfChange['x']
-#dfChange['duration'] = dfdiff_dfChange['x'].abs()
+    # ダミー要素に与える x 値を計算する
+    diffX = df.diff(-1)["x"][0]
 
-df.to_csv("df.csv")
+    # 先頭にダミーの要素を追加して、最初の項目の差分を計算できるようにする
+    dfTemp = pd.DataFrame( {'x' : [diffX], 'state': False }, index=[-1])
+    dfChange = dfTemp.append(dfChange)
 
-fig, ax = plt.subplots()
+    dfdiff_dfChange = dfChange.diff()
 
-df['duration'].hist(ax=ax, bins=range(6))
+    df['duration'] = dfdiff_dfChange['x']
+    #dfChange['duration'] = dfdiff_dfChange['x'].abs()
+
+    df.to_csv("df_" + str(i) + ".csv")
+
+    ax.hist(df['duration'].values, bins=range(6), label=str(i), color=cm.colors[i])
+    ax.legend()
+
 fig.savefig("img.png")
