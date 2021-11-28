@@ -41,7 +41,11 @@ for i in range(num):
 
     df.to_csv("df_" + str(i) + ".csv")
 
-    ax.hist(df['duration'].values, bins=range(6), label=str(i), color=cm.colors[i])
+    min_value=int(np.trunc(df['duration'].min()))
+    max_value=int(np.floor(df['duration'].max())) + 1
+    bins = range(min_value, max_value+1)
+
+    ax.hist(df['duration'].values, bins=bins, label=str(i), color=cm.colors[i])
     ax.legend()
 
 fig.savefig("img.png")
