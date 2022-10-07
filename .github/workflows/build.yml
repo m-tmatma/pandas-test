@@ -19,8 +19,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install tabulate numpy pandas matplotlib
-    - name: build
+    - name: build state_duration
       run: python3 state_duration.py
+
+    - name: build state_change
+      run: python3 state_change.py
+
+    - name: build to_datetime
+      run: python3 to_datetime.py
 
     - name: artifact csv
       uses: actions/upload-artifact@v2
