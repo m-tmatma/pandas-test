@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 num   = 4
-elem  = 100
+elem  = 10
 
 state = np.random.randint(num, size=elem)
 start_x = 0
