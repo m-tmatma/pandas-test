@@ -19,5 +19,5 @@ states = df['state']
 df['change'] = states != states.shift()
 dfChange = df[ df['change'] ]
 
-df.to_csv("df.csv")
-dfChange.to_csv("df_change.csv")
+df.to_csv("df.csv", index=False)
+dfChange.to_csv("df_change.csv", index=False)
