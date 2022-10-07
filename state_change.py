@@ -26,7 +26,7 @@ print(df.shift().to_markdown())
 
 df['change'] = states != states.shift()
 print("df['change']")
-print(df['change'].to_markdown())
+print(df.to_markdown())
 
 dfChange = df[ df['change'] ]
 
