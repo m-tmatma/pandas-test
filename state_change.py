@@ -7,10 +7,13 @@ import numpy as np
 import pandas as pd
 
 num   = 4
+elem  = 100
 
-state = np.random.randint(num, size=100)
-x     = np.arange(100)
-y     = np.arange(100,200)
+state = np.random.randint(num, size=elem)
+start_x = 0
+start_y = 100
+x     = np.arange(start_x, start_x+elem)
+y     = np.arange(start_y, start_y+elem)
 
 df = pd.DataFrame( {'x' : x, 'y' : y, 'state': state })
 
