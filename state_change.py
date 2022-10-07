@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 ''''
 指定した値の変化点を調べるテストスクリプト
+
+以下のモジュールのインストールが必要
+numpy
+pandas
+tabulate
 '''
 import numpy as np
 import pandas as pd
