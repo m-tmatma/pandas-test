@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 ''''
 指定した値の継続時間(duration)を計算するテストスクリプト
