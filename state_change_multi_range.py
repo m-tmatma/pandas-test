@@ -41,11 +41,19 @@ print(df.shift().to_markdown())
 
 df['start'] = states != states.shift()
 print("df['start']")
+
+df['end'] = states != states.shift(-1)
+print("df['end']")
 print(df.to_markdown())
 
 dfStart = df[ df['start'] ]
+dfEnd   = df[ df['end']   ]
 
 df.to_csv("df.csv", index=False)
 dfStart.to_csv("df_start.csv", index=False)
 print("dfStart")
 print(dfStart.to_markdown())
+
+dfEnd.to_csv("df_end.csv", index=False)
+print("dfEnd")
+print(dfEnd.to_markdown())
