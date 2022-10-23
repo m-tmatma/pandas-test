@@ -39,13 +39,13 @@ print(df.to_markdown())
 print("df.shift()")
 print(df.shift().to_markdown())
 
-df['change'] = states != states.shift()
-print("df['change']")
+df['start'] = states != states.shift()
+print("df['start']")
 print(df.to_markdown())
 
-dfChange = df[ df['change'] ]
+dfStart = df[ df['start'] ]
 
 df.to_csv("df.csv", index=False)
-dfChange.to_csv("df_change.csv", index=False)
-print("dfChange")
-print(dfChange.to_markdown())
+dfStart.to_csv("df_start.csv", index=False)
+print("dfStart")
+print(dfStart.to_markdown())
