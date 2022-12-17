@@ -29,13 +29,13 @@ jobs:
       run: python3 to_datetime.py
 
     - name: artifact csv
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: csv
         path: '*.csv'
 
     - name: artifact png
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: png
         path: '*.png'
