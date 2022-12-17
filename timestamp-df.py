@@ -2,14 +2,16 @@
 #
 #
 #   Prepare
-#       pip install pandas openpyxl
+#       pip install pandas openpyxl numpy
 #
 import pandas as pd
+import numpy as np
 import datetime
 
 df = pd.DataFrame(
     {
-        'timestamp': [ datetime.datetime.now() + datetime.timedelta(microseconds=i*1001*1001) for i in range(10)]
+        'timestamp': [ datetime.datetime.now() + datetime.timedelta(microseconds=i*1001*1001) for i in range(10)],
+        'random': np.random.random(10),
     }
 )
 df['timestamp'] = df['timestamp'].dt.strftime('%Y-%m-%d %H:%M:%S.%f')
