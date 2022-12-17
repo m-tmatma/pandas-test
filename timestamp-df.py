@@ -5,9 +5,9 @@
 #       pip install pandas openpyxl numpy
 #
 # See https://towardsdatascience.com/how-to-auto-adjust-the-width-of-excel-columns-with-pandas-excelwriter-60cee36e175e
+import datetime
 import pandas as pd
 import numpy as np
-import datetime
 
 def timedata(i):
     return datetime.datetime.now() + datetime.timedelta(microseconds=i*1001*1001)
