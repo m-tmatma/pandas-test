@@ -18,7 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-        pip install tabulate numpy pandas matplotlib openpyxl
+        pip install tabulate numpy pandas matplotlib openpyxl xlsxwriter
     - name: build state_duration
       run: python3 state_duration.py
 
