@@ -21,4 +21,4 @@ jobs:
         pip install tabulate numpy pandas matplotlib
     - name: Analysing the code with pylint
       run: |
-        pylint --disable=C0301 `ls -R|grep .py$|xargs`
+        pylint --disable=C0301 --disable=E0110 `ls -R|grep .py$|xargs`
