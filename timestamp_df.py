@@ -3,7 +3,7 @@
 This script demonstrates writing dataframe to excel.
 
 Prepare
-   pip install pandas openpyxl numpy
+   pip install pandas openpyxl numpy xlsxwriter
 
 See
 * https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_excel.html
