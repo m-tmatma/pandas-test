@@ -32,8 +32,8 @@ df['timestamp'] = df['timestamp'].dt.strftime('%Y-%m-%d %H:%M:%S.%f')
 with pd.ExcelWriter('timestamp-test.xlsx') as writer:
     sheet_name='Test'
 
-    # freeze_panes to (2, 1) => A2
-    df.to_excel(writer, sheet_name=sheet_name, index=False, freeze_panes=(2, 1))
+    # freeze_panes to (1, 1) => A1
+    df.to_excel(writer, sheet_name=sheet_name, index=False, freeze_panes=(1, 1))
 
     for column in df:
         column_width = max(df[column].astype(str).map(len).max(), len(column))
