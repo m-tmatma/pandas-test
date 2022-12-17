@@ -39,3 +39,9 @@ jobs:
       with:
         name: png
         path: '*.png'
+
+    - name: artifact xlsx
+      uses: actions/upload-artifact@v3
+      with:
+        name: xlsx
+        path: '*.xlsx'
