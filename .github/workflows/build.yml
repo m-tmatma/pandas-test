@@ -28,6 +28,9 @@ jobs:
     - name: build to_datetime
       run: python3 to_datetime.py
 
+    - name: build timestamp_df.py
+      run: python3 timestamp_df.py
+
     - name: artifact csv
       uses: actions/upload-artifact@v3
       with:
