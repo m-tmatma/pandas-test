@@ -5,7 +5,11 @@ This script demonstrates writing dataframe to excel.
 Prepare
    pip install pandas openpyxl numpy
 
-See https://towardsdatascience.com/how-to-auto-adjust-the-width-of-excel-columns-with-pandas-excelwriter-60cee36e175e
+See
+* https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_excel.html
+* https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.ExcelWriter.html
+* https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.ExcelWriter.sheets.html
+* https://towardsdatascience.com/how-to-auto-adjust-the-width-of-excel-columns-with-pandas-excelwriter-60cee36e175e
 """
 import datetime
 import pandas as pd
