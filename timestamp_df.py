@@ -10,6 +10,9 @@ import pandas as pd
 import numpy as np
 
 def timedata(i):
+    '''
+    return test data.
+    '''
     return datetime.datetime.now() + datetime.timedelta(microseconds=i*1001*1001)
 
 df = pd.DataFrame(
