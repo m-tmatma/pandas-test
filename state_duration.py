@@ -33,7 +33,7 @@ for i in range(num):
 
     # 先頭にダミーの要素を追加して、最初の項目の差分を計算できるようにする
     dfTemp = pd.DataFrame( {'x' : [diffX], 'state': False }, index=[-1])
-    dfChange = dfTemp.append(dfChange)
+    dfChange = pd.concat([dfTemp, dfChange])
 
     dfdiff_dfChange = dfChange.diff()
 
