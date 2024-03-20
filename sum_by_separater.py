@@ -2,7 +2,6 @@
 セパレーターの間の合計を求める
 '''
 import pandas as pd
-import numpy as np
 
 # 仮のデータフレームを作成
 df = pd.DataFrame([
