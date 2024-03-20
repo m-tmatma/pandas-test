@@ -1,6 +1,7 @@
 # save dataframe to excel file with adjusted column width
 import pandas as pd
 from io import BytesIO
+from openpyxl import load_workbook
 
 # DataFrameを作成
 df = pd.DataFrame({'A': ['foo', 'bar', 'baz'],
@@ -16,8 +17,6 @@ with pd.ExcelWriter(output, engine='openpyxl') as writer:
 
 # バイナリデータを取得
 excel_data = output.getvalue()
-
-from openpyxl import load_workbook
 
 # BytesIOオブジェクトを再作成
 output = BytesIO(excel_data)
