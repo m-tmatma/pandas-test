@@ -18,17 +18,17 @@ vfunc = np.vectorize(lambda x: coeff[0] * x + coeff[1])
 # やり方1
 start = time.time()
 df["fit"]  = df['x'].apply(vfunc)
-diff1  = time.time() - start
+diff1 = time.time() - start
 
 # やり方2
 start = time.time()
 df["fit2"]  = vfunc(df['x'])
-diff2  = time.time() - start
+diff  = time.time() - start
 
 # やり方3
 start = time.time()
 df["fit3"]  = np.polyval(coeff, df['x'])
-diff3  = time.time() - start
+diff3 = time.time() - start
 
 df["error"] = (df['fit'] - df['y']).abs()
 df["rate%"] = (df['error'] / df["y"]) * 100
