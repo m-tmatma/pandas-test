@@ -18,7 +18,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-        pip install tabulate numpy pandas matplotlib
+        pip install tabulate numpy pandas matplotlib openpyxl xlsxwriter
     - name: Analysing the code with pylint
       run: |
         pylint --disable=C0301 --disable=E0110 `ls -R|grep .py$|xargs`
