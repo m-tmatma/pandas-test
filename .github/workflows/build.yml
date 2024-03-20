@@ -21,15 +21,19 @@ jobs:
         pip install tabulate numpy pandas matplotlib openpyxl xlsxwriter
     - name: build state_duration
       run: python3 state_duration.py
+      if: ${{ always() }}
 
     - name: build state_change
       run: python3 state_change.py
+      if: ${{ always() }}
 
     - name: build to_datetime
       run: python3 to_datetime.py
+      if: ${{ always() }}
 
     - name: build timestamp_df.py
       run: python3 timestamp_df.py
+      if: ${{ always() }}
 
     - name: artifact csv
       uses: actions/upload-artifact@v3
