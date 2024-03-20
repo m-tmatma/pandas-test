@@ -11,7 +11,7 @@ nrows = 2
 ncols = 2
 num   = nrows * ncols
 
-cm = plt.cm.get_cmap('tab20')
+cm = plt.colormaps.get_cmap('tab20')
 
 fig = plt.figure()
 for i in range(num):
