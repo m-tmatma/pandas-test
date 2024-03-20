@@ -38,7 +38,7 @@ for column in ws.columns:
                 max_length = len(cell.value)
         except:
             pass
-    adjusted_width = (max_length + 2)
+    adjusted_width = max_length + 2
     ws.column_dimensions[column[0].column_letter].width = adjusted_width
 
 # 変更を保存
