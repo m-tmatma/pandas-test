@@ -33,11 +33,8 @@ ws = wb.active
 for column in ws.columns:
     max_length = 0
     for cell in column:
-        try:
-            if len(str(cell.value)) > max_length:
-                max_length = len(cell.value)
-        except:
-            pass
+        if len(str(cell.value)) > max_length:
+            max_length = len(str(cell.value))
     adjusted_width = max_length + 2
     ws.column_dimensions[column[0].column_letter].width = adjusted_width
 
