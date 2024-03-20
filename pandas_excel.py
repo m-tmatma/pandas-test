@@ -1,8 +1,8 @@
 '''
 save dataframe to excel file with adjusted column width
 '''
-import pandas as pd
 from io import BytesIO
+import pandas as pd
 from openpyxl import load_workbook
 
 # DataFrameを作成
