@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''
 fit by polyfit on dataframe
 '''
