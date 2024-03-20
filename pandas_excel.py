@@ -32,7 +32,6 @@ ws = wb.active
 # 各列の幅を調整
 for column in ws.columns:
     max_length = 0
-    column = [cell for cell in column]
     for cell in column:
         try:
             if len(str(cell.value)) > max_length:
