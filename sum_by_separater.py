@@ -1,6 +1,6 @@
-#
-#	セパレーターの間の合計を求める
-#
+'''
+セパレーターの間の合計を求める
+'''
 import pandas as pd
 import numpy as np
 

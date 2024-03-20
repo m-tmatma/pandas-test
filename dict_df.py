@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''
+sample code for creating a dataframe from a dictionary
+'''
 import pandas as pd
 
 data = [
@@ -13,4 +16,3 @@ data = [
 
 df = pd.DataFrame(data)
 print(df)
-
