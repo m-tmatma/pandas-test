@@ -50,3 +50,4 @@ for i in range(num):
     ax.legend()
 
 fig.savefig("img.png")
+print("wrote img.png")
