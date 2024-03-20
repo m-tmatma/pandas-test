@@ -40,3 +40,21 @@ print(df)
 print(diff1)
 print(diff2)
 print(diff3)
+
+try:
+    start = time.time()
+    print(f"length of df: {len(df)}")
+    filename = "df.feather"
+    df.to_feather(filename)
+    diff4 = time.time() - start
+
+    start = time.time()
+    df2 = pd.read_feather(filename)
+    diff5 = time.time() - start
+    print(df2)
+    print(f"length of df2: {len(df2)}")
+    print(f"write  to feather {diff4} sec")
+    print(f"read from feather {diff5} sec")
+
+except ImportError:
+    print("feature is not supported.")
