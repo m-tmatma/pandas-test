@@ -24,7 +24,7 @@ diff1 = time.time() - start
 # やり方2
 start = time.time()
 df["fit2"]  = vfunc(df['x'])
-diff  = time.time() - start
+diff2 = time.time() - start
 
 # やり方3
 start = time.time()
