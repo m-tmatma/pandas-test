@@ -42,19 +42,35 @@ print(diff2)
 print(diff3)
 
 try:
-    start = time.time()
     print(f"length of df: {len(df)}")
-    filename = "df.feather"
-    df.to_feather(filename)
+    filename_zst = "df.feather.zst"
+    filename_raw = "df.feather"
+
+    start = time.time()
+    df.to_feather(filename_zst, compression='zstd')
     diff4 = time.time() - start
 
     start = time.time()
-    df2 = pd.read_feather(filename)
+    df.to_feather(filename_raw)
     diff5 = time.time() - start
+    print(f"length of df: {len(df)}")
+
+    start = time.time()
+    df2 = pd.read_feather(filename_zst)
+    diff6 = time.time() - start
     print(df2)
     print(f"length of df2: {len(df2)}")
-    print(f"write  to feather {diff4} sec")
-    print(f"read from feather {diff5} sec")
+
+    start = time.time()
+    df2 = pd.read_feather(filename_raw)
+    diff7 = time.time() - start
+    print(df2)
+    print(f"length of df2: {len(df2)}")
+
+    print(f"write  to feather zst {diff4} sec")
+    print(f"write  to feather raw {diff5} sec")
+    print(f"read from feather zst {diff6} sec")
+    print(f"read from feather raw {diff7} sec")
 
 except ImportError:
     print("feature is not supported.")
