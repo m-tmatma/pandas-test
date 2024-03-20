@@ -37,3 +37,11 @@ df['sum-value'] = df.filter(like='seq-').sum(axis=1)
 df2 = df[ df['type'].isin(['sep', 'data']) ]
 df2 = df2[ df2.shift(-1)['type'] == 'sep' ]
 print(df2)
+
+try:
+    df2.to_feather("df2.feather")
+    df3 = pd.read_feather("df2.feather")
+    print(df3)
+
+except ImportError:
+    print("feature is not supported.")
