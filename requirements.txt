@@ -3,4 +3,5 @@ pandas
 tabulate
 matplotlib
 feather-format
+openpyxl
 
