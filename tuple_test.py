@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import pandas as pd
+import openpyxl
 
 df = pd.DataFrame([
     {
@@ -26,3 +27,4 @@ df = pd.DataFrame([
 ])
 print(df)
 
+df.to_excel("tuple_test.xlsx", index=False)
