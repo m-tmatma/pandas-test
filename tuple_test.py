@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-tuple column name test
+tuple column name test and styleframe
 '''
 # gh-20: tuple_test.py
 
