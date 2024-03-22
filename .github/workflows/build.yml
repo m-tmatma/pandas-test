@@ -36,7 +36,7 @@ jobs:
       if: ${{ always() }}
 
     - name: build tuple_test.py
-      run: python3 timestamp_df.py
+      run: python3 tuple_test.py
       if: ${{ always() }}
 
     - name: artifact csv
