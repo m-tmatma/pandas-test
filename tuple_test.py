@@ -2,7 +2,6 @@
 # gh-20: tuple_test.py
 
 import pandas as pd
-import openpyxl
 
 df = pd.DataFrame([
     {
