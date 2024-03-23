@@ -39,6 +39,10 @@ jobs:
       run: python3 tuple_test.py
       if: ${{ always() }}
 
+    - name: build test_styleframe.py
+      run: python3 test_styleframe.py
+      if: ${{ always() }}
+
     - name: artifact csv
       uses: actions/upload-artifact@v3
       with:
