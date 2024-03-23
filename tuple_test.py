@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 '''
-tuple column name test
+tuple column name test and styleframe
 '''
 # gh-20: tuple_test.py
 
 import pandas as pd
+from styleframe import StyleFrame
 
 df = pd.DataFrame([
     {
@@ -30,4 +31,6 @@ df = pd.DataFrame([
 ])
 print(df)
 
-df.to_excel("tuple_test.xlsx", index=False)
+with StyleFrame.ExcelWriter("tuple_test.xlsx") as writer:
+    sf = StyleFrame(df)
+    sf.to_excel(writer, index=False)
