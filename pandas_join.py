@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+'''
+test script for pandas concat/merge
+'''
 import pandas as pd
 
 df1 = pd.read_csv('data1.csv').set_index(['major_id', 'minor_id'])
