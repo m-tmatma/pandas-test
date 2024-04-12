@@ -16,6 +16,9 @@ print(df)
 print("merge(df3, df4)")
 df = pd.concat([df3, df4], axis=1).reset_index()
 print(df)
+df_nan = df[df.isnull().any(axis=1)]
+print("df_nan")
+print(df_nan)
 
 print("merge(df3, df4)")
 df = pd.merge(df3, df4)
