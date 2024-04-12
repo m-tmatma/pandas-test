@@ -16,3 +16,6 @@ print(df)
 
 df = pd.merge(df3, df4)
 print(df)
+
+df = pd.merge(df4, df3)
+print(df)
