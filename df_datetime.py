@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+'''
+Test for adding a new DataFrame to an existing DataFrame
+'''
 import pandas as pd
 
 df = pd.DataFrame(
@@ -18,4 +20,3 @@ print(df)
 print(df2)
 df3 = pd.concat([df, df2], ignore_index=True)
 print(df3)
-
