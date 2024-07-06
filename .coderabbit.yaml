@@ -1,0 +1,18 @@
+version: 1.0
+
+project:
+  name: "Your Project Name"
+  description: "A brief description of your project"
+  language: "python"
+  dependencies:
+    - numpy
+    - pandas
+
+scripts:
+  start: "python pandas_sin_wave.py"
+  test: "pytest"
+
+settings:
+  python_version: "3.8"
+  linting: true
+  formatting: true
