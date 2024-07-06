@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+'''
+sin
+'''
 import numpy as np
 import pandas as pd
 
