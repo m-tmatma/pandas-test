@@ -9,8 +9,8 @@ import pandas as pd
 num_samples = 100
 x = np.linspace(0, 2 * np.pi, num_samples)
 
-# sin波を計算
-y = np.sin(x)
+# cos波を計算
+y = np.cos(x)
 
 # DataFrameを作成
 df = pd.DataFrame({'X': x, 'Y': y})
